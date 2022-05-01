@@ -31,7 +31,6 @@ for page in range(START_PAGE, END_PAGE):
     time.sleep(0.5)
 
 with open( "samples.csv", "w", newline="" ,encoding = 'utf8' ) as f:
-    #  TODO: encode unicode
     write = csv.writer(f)
     write.writerow(movie_data)
 
