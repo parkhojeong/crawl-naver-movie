@@ -11,6 +11,6 @@ class MovieReivew(RawMovieReview):
         filteredSampleTuleList = []
         for sample in sampleTupleList:
             [_, sentense, score] = sample
-            filteredSampleTuleList.append((sentense.strip(), int(score) >= self.score_threadhold, score))
+            filteredSampleTuleList.append((sentense.strip(), int(score) >= self.score_threadhold))
 
         return filteredSampleTuleList
