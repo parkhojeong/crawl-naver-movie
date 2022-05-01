@@ -36,5 +36,3 @@ for page in range(START_PAGE, END_PAGE):
 with open( "samples.csv", "w", newline="" ,encoding = 'utf8' ) as f:
     write = csv.writer(f)
     write.writerow(movie_data)
-
-# ------------------------------------------------------------------------------------------------
