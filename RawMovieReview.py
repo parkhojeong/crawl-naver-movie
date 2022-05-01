@@ -2,7 +2,6 @@ import csv
 import ast
 
 class RawMovieReview:
-  # TODO: delete member field
   sampleDictionaryList = []
 
   def __init__(self, file_name="samples.csv"):
