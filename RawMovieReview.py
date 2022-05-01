@@ -7,7 +7,8 @@ class RawMovieReview:
 
   def __init__(self, file_name="samples.csv"):
     self.file_name = file_name
-    self.__readCsv(file_name)
+    sampleDictionaryList = self.__readCsv(file_name)
+    self.sampleDictionaryList = sampleDictionaryList
 
   def __readCsv(self, file_name):
     with open(file_name) as csvfile:
@@ -20,7 +21,7 @@ class RawMovieReview:
             for movie in row:
                 sampleDictionaryList.append(ast.literal_eval(movie))
 
-        self.sampleDictionaryList = sampleDictionaryList
+        return sampleDictionaryList
 
   def _getSampleTupleList(self):
       sampleTemp = self.sampleDictionaryList[:]
