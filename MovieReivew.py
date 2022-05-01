@@ -13,5 +13,4 @@ class MovieReivew(RawMovieReview):
             [_, sentense, score] = sample
             filteredSampleTuleList.append((sentense.strip(), int(score) >= self.score_threadhold, score))
 
-        print(filteredSampleTuleList)
         return filteredSampleTuleList
