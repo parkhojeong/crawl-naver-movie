@@ -10,7 +10,7 @@ class RawMovieReview:
     self.sampleDictionaryList = sampleDictionaryList
 
   def __readCsv(self, file_name):
-    with open(file_name) as csvfile:
+    with open(file_name, 'r', encoding="UTF-8") as csvfile:
         readCSV = csv.reader(csvfile, delimiter=',')
 
         sampleDictionaryList = []
