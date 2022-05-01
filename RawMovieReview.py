@@ -12,10 +12,15 @@ class RawMovieReview:
   def __readCsv(self, file_name):
     with open(file_name) as csvfile:
         readCSV = csv.reader(csvfile, delimiter=',')
+
+        sampleDictionaryList = []
+
         for row in readCSV:
             # "{'movie': '니 부모 얼굴이 보고 싶다', 'sentense': '뭔지 ', score: '10' }, ... , {...}"
             for movie in row:
-                self.sampleDictionaryList.append(ast.literal_eval(movie))
+                sampleDictionaryList.append(ast.literal_eval(movie))
+
+        self.sampleDictionaryList = sampleDictionaryList
 
   def _getSampleTupleList(self):
       sampleTemp = self.sampleDictionaryList[:]
