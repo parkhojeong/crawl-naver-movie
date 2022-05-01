@@ -18,7 +18,6 @@ class RawMovieReview:
     for row in csv:
         # "{'movie': '니 부모 얼굴이 보고 싶다', 'sentense': '뭔지 ', score: '10' }, ... , {...}"
         for movie in row:
-            # TODO: except movie without sentense
             self.sampleDictionaryList.append(ast.literal_eval(movie))
 
   def _getSampleTupleList(self):
